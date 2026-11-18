@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haraduka.github.io/qddmm/sitemap.xml

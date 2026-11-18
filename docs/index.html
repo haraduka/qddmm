@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QDD-MM: A Simple and Compact Open-Source Muscle Module with Quasi-Direct-Drive Motor for Tendon-driven Robots</title>
+  <meta name="description" content="An open-source quasi-direct-drive muscle module with configurable wire routing and modular connections for tendon-driven robots.">
+  <link rel="canonical" href="https://haraduka.github.io/qddmm/">
+  <meta property="og:url" content="https://haraduka.github.io/qddmm/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="QDD-MM: A Simple and Compact Open-Source Muscle Module with Quasi-Direct-Drive Motor for Tendon-driven Robots">
+  <meta property="og:description" content="An open-source quasi-direct-drive muscle module with configurable wire routing and modular connections for tendon-driven robots.">
+  <meta property="og:image" content="https://haraduka.github.io/qddmm/assets/img/banner.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="QDD-MM for musculoskeletal humanoids">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QDD-MM: Open-Source Muscle Module">
+  <meta name="twitter:description" content="An open-source quasi-direct-drive muscle module with configurable wire routing and modular connections for tendon-driven robots.">
+  <meta name="twitter:image" content="https://haraduka.github.io/qddmm/assets/img/banner.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<a class="skip-link" href="#abstract">Skip to content</a>
+<header>
+  <h1>QDD-MM<span>A Simple and Compact Open-Source Muscle Module<br class="desktop-break"> with Quasi-Direct-Drive Motor for Tendon-driven Robots</span></h1>
+  <p class="subtitle">IEEE-RAS International Conference on Humanoid Robots (Humanoids 2026)</p>
+  <ul class="authors">
+    <li><a href="https://haraduka.github.io">Kento Kawaharazuka</a></li>
+    <li>Yoshimoto Ribayashi</li><li>Takahiro Hattori</li>
+    <li>Shunnosuke Yoshimura</li><li>Kei Okada</li>
+  </ul>
+  <p class="affiliation">Department of Mechano-Informatics, The University of Tokyo</p>
+  <nav class="resources" aria-label="Project resources">
+    <a class="button" href="assets/paper.pdf">Paper PDF <span aria-hidden="true">↗</span></a>
+    <a class="button" href="#video">YouTube <span aria-hidden="true">▶</span></a>
+    <a class="button" href="https://github.com/haraduka/qddmm">GitHub <span aria-hidden="true">↗</span></a>
+    <a class="button" href="https://drive.google.com/drive/folders/1PGDll5MoJPhwdC_somhJeLg_bphG-0lB?usp=drive_link">Design Files <span aria-hidden="true">↗</span></a>
+    <a class="button" href="#bibtex">BibTeX</a>
+  </nav>
+</header>
+<main>
+<figure class=""><img src="assets/img/concept.png" width="1800" height="1164" fetchpriority="high" decoding="async" alt="QDD-MM modules, tendon-driven joint configurations, and a future full humanoid application"><figcaption>A common muscle module for diverse tendon-driven structures. The full humanoid illustrates a future application.</figcaption></figure><section id="abstract"><h2>Abstract</h2><p>Tendon-driven robots, which actuate like biological muscles by using motors to wind wires, offer advantages such as variable stiffness and redundant actuation.
+  Despite these advantages, musculoskeletal structures inherently involve a large number of diverse muscles, making it desirable to compactly modularize each muscle unit and flexibly accommodate diverse muscle arrangements.
+  While various small muscle modules have been proposed to date, existing designs tend to be complex, difficult to maintain, and suffer from low backdrivability and limited actuation speed due to their high gear ratios.
+  In this work, we propose QDD-MM, a muscle module that leverages recent advances in quasi-direct-drive motors to achieve a simpler and more compact structure with higher backdrivability and faster actuation than previous modules.
+  By utilizing quasi-direct-drive motors, the module eliminates the need for dedicated force-sensing mechanisms, significantly simplifying the overall design, while also supporting flexible wire routing in multiple directions, various module-to-module connections, and even the use of the module body itself as a structural component.
+  QDD-MM integrates these capabilities into a reusable muscle module, and its design is openly available at <a href="https://github.com/haraduka/qddmm">github.com/haraduka/qddmm</a>.
+  We developed tendon-driven robots with one joint and either two or three muscles, as well as a partial musculoskeletal humanoid, using the proposed QDD-MM and verified their effectiveness.
+  We expect that this muscle module will democratize tendon-driven robotics and further accelerate progress in the field.</p></section><section id="video"><h2>Video</h2><div class="video-card"><h3>QDD-MM: Design and Experiments</h3><iframe class="youtube-video" src="https://www.youtube.com/embed/09xRhZO497k" title="QDD-MM: Design and Experiments" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="note"><a href="https://youtu.be/09xRhZO497k">Watch on YouTube</a></p></div></section><section id="design"><h2>Design Overview</h2><p>QDD-MM consists of a main body integrating a RobStride05 quasi-direct-drive motor and a wire-winding pulley, together with a detachable wire routing unit. The motor driver is built in and controlled over CAN. Four machined metal parts and one sheet-metal part form the module.</p><figure class=""><img src="assets/img/design-overview.png" width="1800" height="556" loading="lazy" decoding="async" alt="Labeled main body, motor pulley, and detachable wire routing unit"></figure><div class="table-scroll"><table><caption>Module specifications with a 24 mm winding pulley</caption><tbody>
+<tr><th scope="row">Dimensions</th><td>46 × 58 × 82 mm</td></tr>
+<tr><th scope="row">Module mass</th><td>0.34 kg</td></tr>
+<tr><th scope="row">Gear ratio</th><td>7.75:1</td></tr>
+<tr><th scope="row">Continuous maximum tension</th><td>133 N</td></tr>
+<tr><th scope="row">No-load winding speed</th><td>603 mm/s</td></tr>
+<tr><th scope="row">Tendon</th><td>2 mm-diameter Zylon wire</td></tr>
+</tbody></table></div><p class="note">Tension and speed depend on the actuator and pulley radius. A 12 mm pulley provides 267 N continuous maximum tension and 302 mm/s no-load winding speed.</p></section><section id="parts"><h2>Components and Wire Attachment</h2><p>Download the full assembly STEP, individual component models, and parts list from <a href="https://drive.google.com/drive/folders/1PGDll5MoJPhwdC_somhJeLg_bphG-0lB?usp=drive_link">Google Drive</a>.</p><figure class="narrow"><img src="assets/img/all-parts.png" width="1800" height="1136" loading="lazy" decoding="async" alt="Machined parts, sheet-metal components, and connectors used in QDD-MM"></figure><p>The wire passes alternately around seven small pulleys, distributing the load through friction. This arrangement increases the minimum bending radius to 3 mm and reduces the load on the end knot. Machined parts use A7075 aluminum alloy; sheet-metal parts use A5052.</p><figure class="narrow"><img src="assets/img/wire-connection.png" width="1800" height="803" loading="lazy" decoding="async" alt="Wire attachment path around seven small pulleys"></figure></section><section id="routing"><h2>Flexible Wire Routing</h2><p>The wire routing unit can be mounted on either side of the main body in four orientations. A single top pulley allows forward, backward, leftward, or rightward extraction; two top pulleys also allow upward routing.</p><figure class="narrow"><img src="assets/img/various-routing.png" width="1800" height="1192" loading="lazy" decoding="async" alt="Examples of forward, backward, leftward, rightward, and upward wire routing"></figure></section><section id="connections"><h2>Modular Connections</h2><p>Interlocking module connectors securely join QDD-MM units in parallel or in series. Parallel connections accommodate additional muscles, while series connections allow the module bodies themselves to serve as part of the skeleton. Routing and connection options can be combined to suit different muscle arrangements.</p><figure class="narrow"><img src="assets/img/module-connection.png" width="1801" height="1653" loading="lazy" decoding="async" alt="Interlocking connectors joining QDD-MM modules"></figure><figure class="narrow"><img src="assets/img/various-connection.png" width="1440" height="1800" loading="lazy" decoding="async" alt="Parallel and series module arrangements"></figure></section><section id="assembly">
+<h2>QDD-MM Assembly</h2>
+<p>This video shows the assembly of a QDD-MM muscle module, including wire attachment and the main body components (32× speed).</p>
+<div class="video-card">
+<h3>Assembling a QDD-MM Muscle Module (32× speed)</h3>
+<video controls playsinline preload="none" poster="assets/img/assembly-poster.jpg" aria-label="Assembling a QDD-MM Muscle Module (32× speed)">
+<source src="assets/videos/whole-assembly-x32.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="assets/videos/whole-assembly-x32.mp4">Download the assembly video</a>.
+</video>
+</div>
+</section>
+<section id="module-connection-videos"><h2>Connecting Muscle Modules</h2><p>These videos demonstrate joining completed muscle modules using attachments.</p><div class="video-grid"><div class="video-card"><h3>Module Connection — Example 1 (8× speed)</h3><video controls playsinline preload="none" aria-label="Module Connection — Example 1 (8× speed)"><source src="assets/videos/assembly-1-x8.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/videos/assembly-1-x8.mp4">Download the video</a>.</video></div><div class="video-card"><h3>Module Connection — Example 2 (8× speed)</h3><video controls playsinline preload="none" aria-label="Module Connection — Example 2 (8× speed)"><source src="assets/videos/assembly-2-x8.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/videos/assembly-2-x8.mp4">Download the video</a>.</video></div></div></section><section id="performance"><h2>Backdrivability and Tension Control</h2><p>In a tensile test at 5 mm/s, QDD-MM showed approximately 4 N of resistive force, compared with approximately 8 N for the previous sensor-driver integrated muscle module. Cogging torque produces larger fluctuations in QDD-MM’s resistive force.</p><figure class="narrow"><img src="assets/img/exp-backdrivability.png" width="1800" height="1109" loading="lazy" decoding="async" alt="Wire extension versus resistive force for QDD-MM and the previous muscle module"></figure><p>QDD-MM also exhibited substantially less tension hysteresis. When commanded tension decreased from 200 N to 70 N, measured tension was approximately 80 N for QDD-MM and 160 N for the previous module. These results support current-based tension estimation without a dedicated sensor in the demonstrated applications; residual friction and hysteresis still introduce estimation error.</p><figure class="narrow"><img src="assets/img/exp-hysteresis.png" width="1800" height="1686" loading="lazy" decoding="async" alt="Commanded versus measured muscle tension during increasing and decreasing commands"></figure></section><section id="experiments"><h2>Reconfigurable Tendon-driven Robots</h2><p>Three one-joint configurations demonstrate the same modules in different arrangements: two muscles on a bone frame, three muscles with an additional parallel module, and two modules connected in series to form the skeleton itself.</p><figure class=""><img src="assets/img/exp-setup.png" width="1800" height="769" loading="lazy" decoding="async" alt="Experimental configurations with two muscles, three muscles, and modules serving as the skeleton"></figure><p>All three configurations tracked commanded joint angles with reasonably good accuracy. In the three-muscle configuration, the two agonist muscles shared the load, reducing the required tension per agonist by approximately half.</p><figure class=""><img src="assets/img/exp-result.png" width="1800" height="796" loading="lazy" decoding="async" alt="Joint-angle tracking and muscle-tension measurements for the three robot configurations"></figure></section><section id="humanoid"><h2>Musculoskeletal Shoulder and Arm</h2><p>Eight QDD-MM units drive a 3D-printed musculoskeletal shoulder–arm prototype. Vertical and horizontal module connections provide a compact arrangement, enabling simultaneous movement of the scapula and upper arm. The motors are externally mounted in this prototype; integrating them within a full humanoid is future work.</p><figure class=""><img src="assets/img/muscle-exp.png" width="1800" height="387" loading="lazy" decoding="async" alt="Eight externally mounted QDD-MM units driving successive shoulder and upper-arm postures"></figure><div class="video-card"><h3>Musculoskeletal Robot Demonstration</h3><video controls playsinline preload="none" aria-label="Musculoskeletal Robot Demonstration" poster="assets/img/muscle-exp.png"><source src="assets/videos/yoshimura.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/videos/yoshimura.mp4">Download the video</a>.</video></div></section><section id="bibtex"><h2>BibTeX</h2><pre><code>@inproceedings{kawaharazuka2026qddmm,
+  title = {QDD-MM: A Simple and Compact Open-Source Muscle Module
+           with Quasi-Direct-Drive Motor for Tendon-driven Robots},
+  author = {Kento Kawaharazuka and Yoshimoto Ribayashi and
+            Takahiro Hattori and Shunnosuke Yoshimura and Kei Okada},
+  booktitle = {Proceedings of the IEEE-RAS International Conference on Humanoid Robots},
+  year = {2026},
+  url = {https://github.com/haraduka/qddmm}
+}</code></pre></section><section id="contact"><h2>Contact</h2><p>If you have any questions, please contact <a href="https://haraduka.github.io">Kento Kawaharazuka</a> (<a href="mailto:kawaharazuka@jsk.imi.i.u-tokyo.ac.jp">kawaharazuka@jsk.imi.i.u-tokyo.ac.jp</a>).</p></section>
+</main>
+<footer>QDD-MM · The University of Tokyo</footer>
+</body>
+</html>
