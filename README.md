@@ -4,7 +4,7 @@ A simple and compact open-source muscle module for tendon-driven robots, combini
 
 **Accepted at Humanoids 2026** — IEEE-RAS International Conference on Humanoid Robots.
 
-[Project website](https://haraduka.github.io/qddmm/) · [Paper PDF](docs/assets/paper.pdf) · [Video](https://youtu.be/09xRhZO497k) · [Design files (Google Drive)](https://drive.google.com/drive/folders/1PGDll5MoJPhwdC_somhJeLg_bphG-0lB?usp=drive_link) · [Citation](#citation)
+[Project website](https://haraduka.github.io/qddmm/) · [Paper PDF](docs/assets/paper.pdf) · [arXiv](https://arxiv.org/abs/2611.24279) · [Video](https://youtu.be/09xRhZO497k) · [Design files (Google Drive)](https://drive.google.com/drive/folders/1PGDll5MoJPhwdC_somhJeLg_bphG-0lB?usp=drive_link) · [Citation](#citation)
 
 ![QDD-MM concept and module configurations](docs/assets/img/concept.png)
 
@@ -81,6 +81,9 @@ See [docs/README.md](docs/README.md) for website maintenance notes.
             Takahiro Hattori and Shunnosuke Yoshimura and Kei Okada},
   booktitle = {Proceedings of the IEEE-RAS International Conference on Humanoid Robots},
   year = {2026},
+  eprint = {2611.24279},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
   url = {https://github.com/haraduka/qddmm}
 }
 ```

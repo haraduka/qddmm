@@ -28,4 +28,4 @@ Canonical URL, social image URLs, `robots.txt`, and `sitemap.xml` are configured
 
 The overview video embeds https://youtu.be/09xRhZO497k. The GitHub link points to https://github.com/haraduka/qddmm; the Design Files button links to the [Google Drive package](https://drive.google.com/drive/folders/1PGDll5MoJPhwdC_somhJeLg_bphG-0lB?usp=drive_link).
 
-The original materials came from the paper workspace's `main.tex`, `main.pdf`, `figs/`, and `videos/`. Keep the citation in `index.html` synchronized with `../README.md`. Add DOI, page numbers, and arXiv links when available.
+The original materials came from the paper workspace's `main.tex`, `main.pdf`, `figs/`, and `videos/`. Keep the citation in `index.html` synchronized with `../README.md`. The arXiv version is available at https://arxiv.org/abs/2611.24279. Add the conference DOI and page numbers when available.
